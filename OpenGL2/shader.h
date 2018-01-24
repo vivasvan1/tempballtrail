@@ -1,3 +1,4 @@
+
 #ifndef SHADER_H
 #define SHADER_H
 
@@ -8,10 +9,16 @@ class Shader
 {
     public:
 
+        static const unsigned int NUM_SHADERS = 2;
         Shader(const std::string& fileName);
+        void CheckShaderError(GLuint shader, GLuint flag, bool isProgram, const std::string& errorMessage);
 
-        void Bind(){}
+        std::string LoadShader(const std::string& fileName);
 
+        GLuint CreateShader(const std::string& text,GLenum shaderType);
+
+
+        void Bind();
         virtual ~Shader();
 
     protected:
@@ -20,6 +27,7 @@ class Shader
         static const unsigned int NUM_SHADER = 2;
         Shader(const Shader& other){}
         Shader& operator=(const Shader& other){}
+
 
         GLuint m_program;
         GLuint m_shaders[NUM_SHADERS];
