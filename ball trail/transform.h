@@ -1,6 +1,7 @@
 #ifndef TRANSFORM_INCLUDED_H
 #define TRANSFORM_INCLUDED_H
 
+#include <camera.h>
 #include <glm/glm.hpp>
 #include <glm/gtx/transform.hpp>
 
@@ -26,13 +27,13 @@ public:
 		return posMat * rotMat * scaleMat;
 	}
 
-//	inline glm::mat4 GetMVP(const Camera& camera) const
-//	{
-//		glm::mat4 VP = camera.GetViewProjection();
-//		glm::mat4 M = GetModel();
-//
-//		return VP * M;//camera.GetViewProjection() * GetModel();
-//	}
+	inline glm::mat4 GetMVP(const Camera& camera)
+	{
+		glm::mat4 VP = camera.GetViewProjection();
+		glm::mat4 M = GetModel();
+
+		return VP * M;//camera.GetViewProjection() * GetModel();
+	}
 
 	inline glm::vec3& GetPos() { return pos; }
 	inline glm::vec3& GetRot() { return rot; }

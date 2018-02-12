@@ -33,7 +33,7 @@ class Mesh
         Mesh(Vertex* vertices, unsigned int numVertices, unsigned int* indicies, unsigned int numIndices);
         Mesh(const std::string& fileName);
 
-        void Draw();
+        void Draw(GLuint m_program,glm::mat4 trans);
 
         virtual ~Mesh();
 

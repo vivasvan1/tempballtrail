@@ -11,6 +11,7 @@
 class Shader
 {
     public:
+        GLuint m_program;
 
         static const unsigned int NUM_SHADERS = 2;
         Shader(const std::string& fileName);
@@ -27,7 +28,9 @@ class Shader
 
     protected:
 
+
     private:
+
         static const unsigned int NUM_SHADER = 2;
         Shader(const Shader& other){}
         Shader& operator=(const Shader& other){}
@@ -37,8 +40,6 @@ class Shader
             NUM_UNIFORMS
 
         };
-
-        GLuint m_program;
         GLuint m_shaders[NUM_SHADERS];
         GLuint m_uniforms[NUM_UNIFORMS];
 };

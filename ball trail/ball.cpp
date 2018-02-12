@@ -1,14 +1,12 @@
 #include "ball.h"
-#include "mesh.h"
 #include <iostream>
 #include <string>
 #include <stdlib.h>
+#include <transform.h>
 
 Ball::Ball(const std::string& fileName, int count)
 {
-    Mesh mesh2(fileName);
     SetBallNumber(count);
-
     SetPos(glm::vec3(0,5,0));
     SetVelo(glm::vec3(0,-0.1,0));
 

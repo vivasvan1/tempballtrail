@@ -1,6 +1,10 @@
 #include "mesh.h"
 #include <vector>
 #include "obj_loader.h"
+#include <glm/glm.hpp>
+#include <GLFW/glfw3.h>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 
 Mesh::Mesh(const std::string& fileName){
@@ -97,7 +101,6 @@ void Mesh::InitMesh(const IndexedModel& model){
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_vertexArrayBuffers[INDEX_VB]);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, model.indices.size() * sizeof(model.indices[0]),&model.indices[0],GL_STATIC_DRAW);
 
-
     glBindVertexArray(0);
 
 }
@@ -106,14 +109,15 @@ Mesh::~Mesh(){
     glDeleteVertexArrays(1,&m_vertexArrayObject);
 }
 
-void Mesh::Draw(){
+void Mesh::Draw(GLuint m_program,glm::mat4 trans){
 
     glBindVertexArray(m_vertexArrayObject);
 
-    glDrawElements(GL_TRIANGLES, m_drawCount, GL_UNSIGNED_INT, 0);
     //glDrawArrays(GL_TRIANGLES, 0, m_drawCount);
-
+    //trans = glm::translate(trans, glm::vec3(0.0f, 0.0f, 0.0f));
+    GLuint transformLoc = glGetUniformLocation(m_program,"transform");
+    glUniformMatrix4fv(transformLoc, 1, GL_FALSE, &trans[0][0]);
+    glDrawElements(GL_TRIANGLES, m_drawCount, GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);
-
 
 }

@@ -105,18 +105,19 @@
 	<algorithm>
 	<map>
 
-1517384933 source:/home/vivasvan/Desktop/Projects/ball trail/display.cpp
+1518096908 source:/home/vivasvan/Desktop/Projects/ball trail/display.cpp
 	"display.h"
 	<iostream>
 	<GL/glew.h>
 
-1517071592 /home/vivasvan/Desktop/Projects/ball trail/display.h
+1518097000 /home/vivasvan/Desktop/Projects/ball trail/display.h
 	<SDL2/SDL.h>
 	<string>
 
-1517512153 source:/home/vivasvan/Desktop/Projects/ball trail/main.cpp
+1518107078 source:/home/vivasvan/Desktop/Projects/ball trail/main.cpp
 	<iostream>
 	<GL/glew.h>
+	<GLFW/glfw3.h>
 	"display.h"
 	"shader.h"
 	"mesh.h"
@@ -124,22 +125,26 @@
 	"transform.h"
 	"camera.h"
 	"ball.h"
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	<glm/gtc/type_ptr.hpp>
 
-1517511746 /home/vivasvan/Desktop/Projects/ball trail/shader.h
+1518046203 /home/vivasvan/Desktop/Projects/ball trail/shader.h
 	<camera.h>
 	<string>
 	<transform.h>
 	<GL/glew.h>
 
-1517118825 /home/vivasvan/Desktop/Projects/ball trail//camera.h
+1517674297 /home/vivasvan/Desktop/Projects/ball trail//camera.h
 	<glm/glm.hpp>
 	<glm/gtx/transform.hpp>
 
-1517075043 /home/vivasvan/Desktop/Projects/ball trail//transform.h
+1517674250 /home/vivasvan/Desktop/Projects/ball trail//transform.h
+	<camera.h>
 	<glm/glm.hpp>
 	<glm/gtx/transform.hpp>
 
-1517381869 /home/vivasvan/Desktop/Projects/ball trail/mesh.h
+1518056291 /home/vivasvan/Desktop/Projects/ball trail/mesh.h
 	<glm/glm.hpp>
 	<GL/glew.h>
 	"obj_loader.h"
@@ -153,18 +158,23 @@
 	<string>
 	<GL/glew.h>
 
-1517075043 /home/vivasvan/Desktop/Projects/ball trail/transform.h
+1517674250 /home/vivasvan/Desktop/Projects/ball trail/transform.h
+	<camera.h>
 	<glm/glm.hpp>
 	<glm/gtx/transform.hpp>
 
-1517118825 /home/vivasvan/Desktop/Projects/ball trail/camera.h
+1517674297 /home/vivasvan/Desktop/Projects/ball trail/camera.h
 	<glm/glm.hpp>
 	<glm/gtx/transform.hpp>
 
-1517383607 source:/home/vivasvan/Desktop/Projects/ball trail/mesh.cpp
+1518097207 source:/home/vivasvan/Desktop/Projects/ball trail/mesh.cpp
 	"mesh.h"
 	<vector>
 	"obj_loader.h"
+	<glm/glm.hpp>
+	<GLFW/glfw3.h>
+	<glm/gtc/matrix_transform.hpp>
+	<glm/gtc/type_ptr.hpp>
 
 1516436424 source:/home/vivasvan/Desktop/Projects/ball trail/obj_loader.cpp
 	"obj_loader.h"
@@ -173,7 +183,7 @@
 	<algorithm>
 	<map>
 
-1517512869 source:/home/vivasvan/Desktop/Projects/ball trail/shader.cpp
+1518046940 source:/home/vivasvan/Desktop/Projects/ball trail/shader.cpp
 	"shader.h"
 	<iostream>
 	<fstream>
@@ -190,7 +200,7 @@
 	<stddef.h>
 	<stdint.h>
 
-1517071737 source:/home/vivasvan/Desktop/Projects/ball trail/texture.cpp
+1518057001 source:/home/vivasvan/Desktop/Projects/ball trail/texture.cpp
 	"texture.h"
 	"stb_image.h"
 	<cassert>
@@ -212,14 +222,37 @@
 	<intrin.h>
 	<arm_neon.h>
 
-1517513359 source:/home/vivasvan/Desktop/Projects/ball trail/ball.cpp
+1517936404 source:/home/vivasvan/Desktop/Projects/ball trail/ball.cpp
 	"ball.h"
-	"mesh.h"
 	<iostream>
 	<string>
 	<stdlib.h>
+	<transform.h>
 
-1517512707 /home/vivasvan/Desktop/Projects/ball trail/ball.h
+1517678174 /home/vivasvan/Desktop/Projects/ball trail/ball.h
+	<mesh.h>
 	<string>
+	<transform.h>
 	<glm/glm.hpp>
+
+1517677848 source:/home/vivasvan/Desktop/Projects/ball trail/box.cpp
+	"box.h"
+
+1517678433 /home/vivasvan/Desktop/Projects/ball trail/box.h
+	<texture.h>
+	<mesh.h>
+
+1517071735 /home/vivasvan/Desktop/Projects/ball trail//texture.h
+	<string>
+	<GL/glew.h>
+
+1518056291 /home/vivasvan/Desktop/Projects/ball trail//mesh.h
+	<glm/glm.hpp>
+	<GL/glew.h>
+	"obj_loader.h"
+
+1516436424 /home/vivasvan/Desktop/Projects/ball trail//obj_loader.h
+	<glm/glm.hpp>
+	<vector>
+	<string>
 

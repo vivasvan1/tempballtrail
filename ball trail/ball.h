@@ -1,7 +1,9 @@
 #ifndef BALL_H
 #define BALL_H
 
+#include <mesh.h>
 #include <string>
+#include <transform.h>
 #include <glm/glm.hpp>
 
 
@@ -20,15 +22,15 @@ class Ball
         inline glm::vec3 GetVelo(){ return velo; }
         inline glm::vec3 GetGravity(){ return gravity; }
 
-
-        inline float SetPos(glm::vec3 pos){ this->pos = pos; }
-        inline float SetVelo(glm::vec3 velo){this-> velo = velo; }
-        inline float SetGravity(glm::vec3 gravity){this-> gravity = gravity; }
+        inline void SetPos(glm::vec3 pos){ this->pos = pos; }
+        inline void SetVelo(glm::vec3 velo){this-> velo = velo; }
+        inline void SetGravity(glm::vec3 gravity){this-> gravity = gravity; }
 
 
     protected:
 
     private:
+
         int Bnumber;
         glm::vec3 pos;
         glm::vec3 velo;
